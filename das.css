@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #fffef8;
+    height: 100%;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 3rem; 
+    font-weight: 800;
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    padding-left: 40px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 10;
+    background-color: #ffcc00;
+    border-bottom: 1px solid #000;
+}
+
+/* Menu */
+.menu {
+    display: flex;
+    justify-content: left;
+    margin-left: 20px;
+    flex-grow: 1;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    padding: 0.5rem 1rem; 
+}
+
+.menu ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1rem; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+.login-signup {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+    gap: 20px; 
+}
+
+.login-signup ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.login-signup ul li {
+    list-style: none;
+    margin-right: 10px;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem; 
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 1px solid #000000;
+    outline: none;
+}
+
+.btn-login {
+    background-color: #000000; 
+    color: white;
+}
+
+.btn-login a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.btn-signup {
+    background-color: transparent; 
+    color: #000000; 
+}
+
+.btn-signup:hover {
+    background-color: #000000; 
+    color: white; 
+}
+
+.btn-signup a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    display: none; 
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 4px 0;
+    background-color: #000;
+    transition: all 0.3s ease;
+}
+
+.menu {
+    display: flex;
+    justify-content: left;
+    flex-grow: 1;
+}
+
+.text-box {
+    width: 90%;
+    position: relative;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin-top: 130px;
+    text-align: center;
+    color: #3d2e21;
+    font-size: 1.5rem; 
+    font-weight: bolder;
+}
+
+.search {
+    display: flex;
+    justify-content: center; 
+    align-items: center;        
+}
+
+.search-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    margin: 20px;
+    border: 1px solid #000000;
+    border-radius: 30px;
+    padding: 5px 15px;
+    background-color: #ffcc00;
+    width: 70%; 
+}
+
+.search-input {
+    border: 1px solid #000000;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 25px;
+    width: 100%; 
+    transition: width 0.3s ease;
+}
+
+.search-btn {
+    background-color: #000000;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 10px;
+    color: white;
+    font-size: 16px;
+}
+
+.search-btn a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.search-btn:hover {
+    background-color: #d8ad01;
+}
+
+.filter-select {
+    padding: 10px;
+    border-radius: 25px;
+    border: 1px solid #000;
+    background-color: white;
+    font-size: 16px;
+    width: 160px;  
+    margin-right: 10px; 
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.filter-select:hover {
+    border-color: #ffcc00;  
+}
+
+.filter-select:focus {
+    border-color: #000;
+    outline: none;
+}
+
+.maps-container {
+    display: flex;
+    justify-content: center;  
+    align-items: center;  
+    margin-bottom: 40px;      
+}
+
+#mappy {
+    height: 400px;  /* Atur tinggi peta */
+    width: 100%;    /* Atur lebar peta sesuai lebar kontainer */
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 90%;          /* Lebar peta sesuai 90% kontainer */
+    height: 20rem; 
+}
+
+.maps-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+footer {
+    background-color: #ffcc00;
+    padding: 20px 30px; 
+    text-align: center; 
+    border-top: 1px solid #000;
+}
+
+
+/* mobile ver */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu ul {
+        flex-direction: column; 
+        width: 100%;
+    }
+
+    .menu ul li {
+        margin: 15px 0;
+    }
+
+    .menu-toggle {
+        display: flex; 
+    }
+
+    .menu.active {
+        display: flex; 
+    }
+
+    .menu-toggle.open .bar:nth-child(1) {
+        transform: rotate(45deg);
+        position: relative;
+        top: 6px;
+    }
+
+    .menu-toggle.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.open .bar:nth-child(3) {
+        transform: rotate(-45deg);
+        position: relative;
+        top: -6px;
+    }
+
+    .logo a {
+        font-size: 2rem;
+    }
+
+    .btn-signup {
+        display: none;
+    }
+
+    .text-box {
+        margin-bottom: 10px; /* Reduced margin-bottom to bring elements closer */
+    }
+
+    .text-box h1 {
+        font-size: 2rem;
+        margin-bottom: 0;
+    }
+
+    .text-box h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0px;
+    }
+
+    .search-container {
+        padding: 5px 12px;
+        margin-top: 5px; /* Optional: Reduce the gap between text-box and search */
+    }
+
+    .search-input {
+        width: 75%;
+        font-size: 15px;
+    }
+
+    .search-btn {
+        padding: 8px;
+        font-size: 15px;
+        border-radius: 50%;
+    }
+
+    .filter-select {
+        display: none; /* Keeps the filter hidden */
+    }
+}
+
+
